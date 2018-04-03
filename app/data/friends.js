@@ -48,7 +48,7 @@ var surveyArray = [
       4,
       3
     ]
-  }
+  },
   {
     "name": "Karen Spärck Jones",
     "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Karen_Sp%C3%A4rck.jpg/220px-Karen_Sp%C3%A4rck.jpg",

@@ -1,14 +1,14 @@
 
 // LOAD DATA 
 // Link the route to a data source holding arrays of information on survey responses
-var surveyData = require("../data/surveyData");
+var surveyData = require("../data/friends");
 
 // ROUTING
 module.exports = function(app) {
 
   // API GET request 
   // Display a JSON of the survey data in the table (all possible friends)
-  app.get("api/friends", function(req, res) {
+  app.get("/api/friends", function(req, res) {
     res.json(surveyData);
   });
 
