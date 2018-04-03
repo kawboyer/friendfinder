@@ -21,80 +21,80 @@ var surveyArray = [
     "name": "Annie Easley",
     "photo": "http://www.nasa.gov/sites/default/files/thumbnails/image/easley.jpg",
     "scores": [
-      3,
-      3,
-      3,
-      2,
-      4,
       2,
       2,
       1,
+      1,
       4,
-      3
+      3,
+      5,
+      5,
+      2,
+      1
     ]
   },
   {
     "name": "Adele Goldberg",
     "photo": "https://www.computerhope.com/people/pictures/adele_goldberg.jpg",
     "scores": [
-      3,
-      3,
-      3,
       2,
-      4,
-      2,
-      2,
+      5,
+      5,
+      3,
       1,
+      1,
+      3,
       4,
-      3
+      5,
+      1
     ]
   },
   {
     "name": "Karen Spärck Jones",
     "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Karen_Sp%C3%A4rck.jpg/220px-Karen_Sp%C3%A4rck.jpg",
     "scores": [
-      3,
-      3,
-      3,
-      2,
-      4,
-      2,
-      2,
       1,
+      2,
+      5,
+      5,
       4,
-      3
+      3,
+      1,
+      2,
+      2,
+      5
     ]
   },
   {
     "name": "Donna Dubinsky",
     "photo": "https://www.alumni.hbs.edu/PublishingImages/stories/thumbs/Dubinsky_Donna_527x333.jpg",
     "scores": [
-      3,
-      3,
-      3,
-      2,
+      5,
+      5,
+      5,
       4,
-      2,
-      2,
-      1,
+      5,
+      5,
+      5,
       4,
-      3
+      5,
+      1
     ]
   },
   {
     "name": "Angelica Ross",
     "photo": "https://www.advocate.com/sites/advocate.com/files/2015/08/31/Angelica-Ross-400x300.jpg",
     "scores": [
-      3,
-      3,
-      3,
-      2,
       4,
-      2,
+      1,
       2,
       1,
-      4,
-      3
+      2,
+      1,
+      5,
+      5,
+      1,
+      2
     ]
   }
 ];
