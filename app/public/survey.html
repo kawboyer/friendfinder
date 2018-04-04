@@ -14,6 +14,11 @@
   <!-- Font Awesome Glyphicons -->
   <script defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js" integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl"
     crossorigin="anonymous"></script>
+    <script
+    src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+  
 </head>
 
 <body>
@@ -227,7 +232,7 @@
       <br>
       <div class="row">
         <div class="col-sm-12">
-          <button type="submit" class="btn btn-primary btn-lg btn-block"><span class="fas fa-check-circle"></span> Submit</button>
+          <button type="submit" class="btn btn-primary btn-lg btn-block submit"><span class="fas fa-check-circle"></span> Submit</button>
         </div>
       </div>
     </form>
@@ -250,15 +255,34 @@
 
   $(".submit").on("click", function(event) {
     event.preventDefault();
+    alert("submitted");
 
     var newInput = {
-      name: $("#inputName").val().trim();
-      photo: $("#inputLinkImage").val().trim();
-      //scores: []
-
+      name: $("#inputName").val().trim(),
+      photo: $("#inputLinkImage").val().trim(),
+      scores: [
+        $("#q1").val().trim(),
+        $("#q2").val().trim(),
+        $("#q3").val().trim(),
+        $("#q4").val().trim(),
+        $("#q5").val().trim(),
+        $("#q6").val().trim(),
+        $("#q7").val().trim(),
+        $("#q8").val().trim(),
+        $("#q9").val().trim(),
+        $("#q10").val().trim(),
+      ]
     }
+
+    $.post("/api/friends", newInput, function(req, res) {
+      console.log(req.body);
+      console.log("I'm in survey post");
+
+      // render the best match
+    
+    });
   });
-  
+
 </script>
 
 </html>
