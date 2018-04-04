@@ -255,7 +255,7 @@
 
   $(".submit").on("click", function(event) {
     event.preventDefault();
-    alert("submitted");
+    // alert("submitted");
 
     var newInput = {
       name: $("#inputName").val().trim(),
@@ -275,10 +275,9 @@
     }
 
     $.post("/api/friends", newInput, function(req, res) {
-      console.log(req.body);
-      console.log("I'm in survey post");
+      console.log(newInput);
 
-      // render the best match
+      // Render the best match
     
     });
   });

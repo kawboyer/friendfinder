@@ -1,6 +1,6 @@
 // DATA
 // This table will hold all of the survey data
-var surveyArray = [
+var friends = [
   {
     "name": "Grace Hopper",
     "photo": "https://www.biography.com/.image/t_share/MTE5NTU2MzE2NjYxNTE1Nzg3/grace-hopper-21406809-1-402.jpg",
@@ -34,4 +34,4 @@ var surveyArray = [
 ];
 
 // Export the array so other files can require it.
-module.exports = surveyArray;
+module.exports = friends;

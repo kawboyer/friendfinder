@@ -1,36 +1,8 @@
 
 // LOAD DATA 
 // Link the route to a data source holding arrays of information on survey responses
-var surveyData = require("../data/friends");
+var friends = require("../data/friends");
 // console.log(surveyData);
-
-// // Convert the input data into an array of numbers
-
-// // Calculate the sum of the input data
-
-// // Compare the difference between current user data and saved data.
-// var isEqual = function (value, other) {
-//   // 
-//     var valueLength = surveyArray;
-//     var otherLength = inputArray;
-
-//     if (valueLength !== otherLength) {
-//       return false
-//     }
-
-//     return true;
-//   };
-
-//   var surveyArray = [];
-//   var inputArray = [];
-
-
-
-//   // Calculate the "totalDifference" (use absolute value)
-
-//   // Determine the match
-
-//   // Modal pop-up with name and picture
 
 // ROUTING
 module.exports = function (app) {
@@ -38,7 +10,7 @@ module.exports = function (app) {
   // API GET request 
   // Display a JSON of the survey data in the table (all possible friends)
   app.get("/api/friends", function (req, res) {
-    res.json(surveyData);
+    res.json(friends);
   });
 
   // API POST request
@@ -47,30 +19,69 @@ module.exports = function (app) {
     // console.log("apiRoutes");
 
     var userData = req.body;
-    var userScores = userData.scores;
+    var userScoresArray = userData.scores;
+    var userScores;
+    var friendsScoreArray = friends[i].scores;
 
-    // var sumUserScores = userScores.reduce(function (userScores, b) {
-    //   return userScores + b;
-    //   }, 0
-    // );
+    for (var i = 0; i < userScoresArray.length; i++) {
+      userScores = userScoresArray[i] + userScoresArray[i];
+    }
     console.log(userScores);
 
-    var difference;
+    var difference = 0;
 
-    for (var i = 0; i < surveyData.length; i++) {
-      for (var j = 0; i < (userScores).length; i++) {
-        if (surveyData[i] === userScores[i]) {
-          // COMPARE SUMS
-        }
-      }
+    for (var j = 0; j < friendsScoreArray.length; j++) {
+      friendsScore = friendsScoreArray[i] + friendsScoreArray[i];
     }
+    console.log(friendsScore);
 
-    // push user data into friends.js
-    // take best match 
 
-    // send name image as an object res.json to survey.html
+    // var userScores = parseInt(userScoresArray);
 
-    // res.json(true)
-    // console.log(surveyData);
+    // console.log(userScores);
+
+
+    // for (var i = 0; i < surveyData.length; i++) {
+    //   for (var j = 0; i < userScores.length; i++) {
+    //     if (surveyData[i] === userScores[i]) {
+    //       // COMPARE SUMS
+    //     }
+    //   }
+    // }
+
+    // if (userScores.length = 10) {
+    //   for (var i =0; i < userScores.length; sum +=[i++]) {
+    //     console.log(sumUserScores);
+    //   }
+    // }
+
+    // console.log(userScores);
+
+
+  
+
+    // var difference;
+
+
+
+    // // push user data into friends.js
+    // // take best match 
+
+    // // send name image as an object res.json to survey.html
+
+    // // res.json(true)
+    // // console.log(surveyData);
   });
 };
+
+// Convert the input data into an array of numbers
+
+// Calculate the sum of the input data
+
+// Compare the difference between current user data and saved data.
+
+// Calculate the "totalDifference" (use absolute value)
+
+// Determine the match
+
+// Modal pop-up with name and picture
