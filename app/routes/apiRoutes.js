@@ -20,68 +20,38 @@ module.exports = function (app) {
 
     var userData = req.body;
     var userScoresArray = userData.scores;
-    var userScores;
-    var friendsScoreArray = friends[i].scores;
+    var userScores = 0;
+    
+    var totalScore = [];
+  
 
     for (var i = 0; i < userScoresArray.length; i++) {
-      userScores = userScoresArray[i] + userScoresArray[i];
+      userScores += parseInt(userScoresArray[i]);
+      console.log(userScores);
     }
-    console.log(userScores);
+    console.log("User score: " + userScores);
 
     var difference = 0;
 
-    for (var j = 0; j < friendsScoreArray.length; j++) {
-      friendsScore = friendsScoreArray[i] + friendsScoreArray[i];
+    for (var j = 0; j < friends.length; j++) {
+      var friendsScore = 0;
+      for (var k = 0; k < friends[j].scores.length; k++) {
+        friendsScore += parseInt(friends[j].scores[k]);
+      }
+      totalScore.push(friendsScore);
+      console.log("Friends score: " + friendsScore);
     }
-    console.log(friendsScore);
+    console.log(totalScore);
 
+    // function
+    // runb for loop through the totalscore
 
-    // var userScores = parseInt(userScoresArray);
+    //smallest difference
 
-    // console.log(userScores);
+    // determine the person that belongs to
 
+    
 
-    // for (var i = 0; i < surveyData.length; i++) {
-    //   for (var j = 0; i < userScores.length; i++) {
-    //     if (surveyData[i] === userScores[i]) {
-    //       // COMPARE SUMS
-    //     }
-    //   }
-    // }
-
-    // if (userScores.length = 10) {
-    //   for (var i =0; i < userScores.length; sum +=[i++]) {
-    //     console.log(sumUserScores);
-    //   }
-    // }
-
-    // console.log(userScores);
-
-
-  
-
-    // var difference;
-
-
-
-    // // push user data into friends.js
-    // // take best match 
-
-    // // send name image as an object res.json to survey.html
-
-    // // res.json(true)
-    // // console.log(surveyData);
+   
   });
 };
-
-// Convert the input data into an array of numbers
-
-// Calculate the sum of the input data
-
-// Compare the difference between current user data and saved data.
-
-// Calculate the "totalDifference" (use absolute value)
-
-// Determine the match
-
-// Modal pop-up with name and picture
